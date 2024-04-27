@@ -10,49 +10,44 @@
 
 
 
+/* Base styles for header and navigation */
 nav {
-
     width: 100%;
-    margin: 0 auto;
     padding: 1.25rem;
     height: 5rem;
     background-color: #333;
     color: #fff;
     position: fixed;
-
-
 }
 
 nav .container {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    max-width: 1200px;
+    /* Set a maximum width for the container */
+    margin: 0 auto;
 }
 
 nav .container .heading {
     font-size: 2.5rem;
     color: #007bff;
-
 }
 
 nav .container .heading span {
-
     color: #ffffff;
-
 }
 
 header nav .container ul {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
+    padding: 0;
 }
 
 header nav ul li {
     display: inline-block;
     margin-right: 1rem;
-
 }
 
 header nav ul li a {
@@ -69,9 +64,37 @@ header nav ul li a:hover {
     color: #007bff;
     background-color: #fff;
     box-shadow: 0 5px 15px rgb(255, 255, 255);
-
 }
 
+
+.menu-toggle-btn {
+    float: right;
+    height: 100%;
+    line-height: 1.25rem !important;
+    color: #fff;
+    font-size: 4rem;
+    display: none !important;
+    cursor: pointer;
+}
+
+@media screen and (max-width:700px) {
+    .menu-toggle-btn {
+        display: block !important;
+        height: 100%;
+    }
+
+    header nav .container .nav-menu {
+
+        display: none;
+
+    }
+
+    header nav .container .nav-menu .open {
+
+        display: block;
+
+    }
+}
 
 .hero .container {
     background-color: #007bff;
@@ -226,3 +249,76 @@ footer span {
 .quiz button:hover {
     background-color: #0056b3;
 }
+
+/* page for jokes */
+.joke {
+    background-color: #fab22e;
+    height: 100vh;
+}
+
+.joke .wrapper {
+    width: 80vmin;
+    padding: 3rem 3.5rem;
+    background-color: #333;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 1%;
+    box-shadow: 20px 20px 40px rgba(97, 63, 0, 0.4);
+
+}
+
+.joke .wrapper span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.joke .wrapper span img {
+    height: 10rem;
+    width: 10rem;
+    text-align: center;
+
+}
+
+.joke .wrapper p {
+    font-size: 1.5rem;
+    color: #ccc;
+    font-weight: 500;
+    text-align: center;
+    word-wrap: break-word;
+    line-height: 2rem;
+    margin: .5rem 0;
+
+}
+
+.joke .wrapper button {
+    display: block;
+    -webkit-border-radius: 60;
+    -moz-border-radius: 60;
+    border-radius: 60px;
+    text-shadow: 0px 1px 11px #003ef7;
+    -webkit-box-shadow: 0px 0px 5px #4d4d4d;
+    -moz-box-shadow: 0px 0px 5px #4d4d4d;
+    box-shadow: 0px 0px 5px #4d4d4d;
+
+    color: #000;
+    font-size: 1.2rem;
+    background: #fab22e;
+    padding: 10px 25px 10px 25px;
+    border: solid #000000 3px;
+    text-decoration: none;
+    margin: 0 auto;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.joke .wrapper button:hover {
+    background: #02080c6b;
+    text-decoration: none;
+    color: #fab22e;
+}
+
+/*responsive*/
