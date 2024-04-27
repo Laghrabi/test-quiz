@@ -3,45 +3,86 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 /* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-}
 
-.container {
-    max-width: 1200px;
+
+
+nav {
+
+    width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
-}
-
-header {
+    padding: 1.25rem;
+    height: 5rem;
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
+    position: fixed;
+
+
 }
 
-header nav ul {
+nav .container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav .container .heading {
+    font-size: 2.5rem;
+    color: #007bff;
+
+}
+
+nav .container .heading span {
+
+    color: #ffffff;
+
+}
+
+header nav .container ul {
     list-style-type: none;
+    display: flex;
+    justify-content: space-around;
 }
 
 header nav ul li {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 1rem;
+
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 5%;
+    transition: 0.3s ease-in-out;
 }
 
-.hero {
+header nav ul li a:hover {
+    color: #007bff;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgb(255, 255, 255);
+
+}
+
+
+.hero .container {
     background-color: #007bff;
     color: #fff;
     padding: 100px 0;
     text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .hero h2 {
@@ -55,23 +96,133 @@ header nav ul li a {
 }
 
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #fff;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    text-shadow: 0px 1px 11px #000000;
+    -webkit-box-shadow: 0px 0px 30px #4d4d4d;
+    -moz-box-shadow: 0px 0px 30px #4d4d4d;
+    box-shadow: 0px 0px 30px #4d4d4d;
+    font-family: Arial;
     color: #007bff;
+    font-size: 20px;
+    background: #ffffff;
+    padding: 10px 25px 10px 25px;
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
 }
 
 .btn:hover {
-    background-color: #f0f0f0;
+    background: #333;
+    color: #ffffff;
+
+    text-decoration: none;
 }
 
 footer {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 0.75rem;
     text-align: center;
+    font-size: 1.5rem;
+}
+
+footer span {
+    background-color: #333;
+    color: #007bff;
+    padding-left: 0.75rem;
+
+}
+
+.quiz {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+}
+
+.quiz .quiz-container {
+    text-align: center;
+    max-width: 100rem;
+    width: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quiz #question-container {
+    margin-bottom: 20px;
+}
+
+.quiz #question-container h2 {
+    margin: 1rem auto;
+    font-weight: 700;
+    color: #007bff;
+}
+
+.quiz .answers {
+    list-style-type: none;
+    padding: 0;
+}
+
+.quiz .answers li {
+    cursor: pointer;
+    padding: 0.75rem;
+    margin: 0.25rem;
+    border: 5px solid #94a4ff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.quiz .answers li:hover {
+    background-color: #a5d4d2;
+}
+
+.answers li.selected {
+    background-color: #007bff;
+    color: #fff;
+
+    background-color: #1c6b67;
+}
+
+.quiz .quiz-container #result {
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    font-style: oblique;
+    font-weight: 700;
+
+}
+
+/* Add styles for 'right' and 'wrong' classes */
+.right {
+    color: #66bb6a;
+    /* Green for correct answer */
+}
+
+.wrong {
+    color: #ef5350;
+    /* Red for incorrect answer */
+
+}
+
+
+.quiz button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.quiz button:hover {
+    background-color: #0056b3;
 }
