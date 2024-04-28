@@ -37,6 +37,7 @@ nav {
     align-items: center;
     padding: 0;
     margin: 0;
+    z-index: 9999;
 }
 
 .nav-links li {
@@ -88,18 +89,20 @@ nav {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
-        z-index: 10000;
+        z-index: 100000;
     }
 
     .container .nav-links.open {
         max-height: 50rem;
-        z-index: 10000;
+        z-index: 100000;
         /* Adjust the height as needed */
+
     }
 
     .container .nav-links li {
         opacity: 1;
         transition: all 0.5s ease;
+        margin: 1rem auto;
 
     }
 
@@ -289,18 +292,24 @@ footer span {
 .joke {
     background-color: #fab22e;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .joke .wrapper {
     width: 80vmin;
     padding: 3rem 3.5rem;
     background-color: #333;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+
+
+    left: 30%;
+    margin: -25px 0 0 -25px;
+    /* Apply negative top and left margins to truly center the element */
     border-radius: 1%;
     box-shadow: 20px 20px 40px rgba(97, 63, 0, 0.4);
+
 
 }
 
