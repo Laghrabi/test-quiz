@@ -38,11 +38,12 @@ nav .container .heading span {
     color: #ffffff;
 }
 
-header nav .container ul {
+header nav .container .nav-menu {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
-    padding: 0;
+    align-items: center;
+    padding: 0 auto;
 }
 
 header nav ul li {
@@ -66,35 +67,44 @@ header nav ul li a:hover {
     box-shadow: 0 5px 15px rgb(255, 255, 255);
 }
 
-
 .menu-toggle-btn {
     float: right;
     height: 100%;
     line-height: 1.25rem !important;
     color: #fff;
-    font-size: 4rem;
+    font-size: 3rem;
     display: none !important;
+    margin-top: 0;
     cursor: pointer;
 }
 
-@media screen and (max-width:700px) {
+@media (max-width: 700px) {
     .menu-toggle-btn {
         display: block !important;
-        height: 100%;
+    }
+
+    header nav .container {
+        display: block;
+
+
     }
 
     header nav .container .nav-menu {
-
         display: none;
+        justify-content: center;
+        flex-direction: column;
+
 
     }
+
 
     header nav .container .nav-menu .open {
-
-        display: block;
-
+        display: flex;
+        background: red;
     }
 }
+
+
 
 .hero .container {
     background-color: #007bff;

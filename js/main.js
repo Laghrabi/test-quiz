@@ -611,11 +611,3 @@ btnj.addEventListener("click", getJoke);
 getJoke();
 
 //toggle
-// Get the necessary elements
-const toggleButton = document.getElementById("toggle-icon");
-const navMenu = document.getElementById("nav-menu");
-
-toggleButton.onclick = function () {
-  menuToggle.classList.toggle("active");
-  navMenu.classList.toggle("open");
-};
